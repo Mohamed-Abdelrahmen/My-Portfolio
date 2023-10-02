@@ -1,0 +1,443 @@
+
+* {
+    box-sizing: border-box;
+}
+:root {
+    --main-color: #13b56a;
+    --alt-color: #e31c25;
+    --section-heading-color: #bb000e;
+    --section-body-color: #1c1c1c;
+    --black-color:#380356;
+    --main-transion:0.3s;	
+    --alt-transion:0.5s;
+    --padding-section: 30px;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+
+/* Commopnents */
+.main-heading {
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-align: center;
+    color: #1a383a;
+}
+
+/* Header */
+header {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 10px #ccc;
+}
+header h2 {
+    color: var(--main-color);
+    margin-left: 200px;
+}
+header .links {
+    display: flex;
+}
+header .links li {
+    font-size: 18px;
+    margin-right: 50px;
+}
+@media (max-width: 799px) {
+    header .links {
+        display: none;
+    }
+}
+@media (max-width: 1121px) {
+    header h2 {
+        margin-left: 50px;
+        text-align: center;
+    }
+    header .links  li{
+        margin-right: 15px;
+    }
+
+}
+header .links  a {
+    color: #000;
+}
+header .links a:hover {
+    color: #777;
+}
+
+/* Landing */
+.landing {
+    height: 100vh;
+    background-color: #ccc;
+    overflow: hidden;
+}
+.landing .cont {
+    position: relative;
+    top: 45%;
+    left: 10%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.landing .cont .text {
+    position: relative;
+    right: 15%;
+}
+.landing .cont .text span {
+    color: var(--main-color);
+    font-size: 20px;
+}
+.landing .cont .text h2 {
+    font-size: 40px;
+    color: #1a383a;
+}
+.landing .cont .text p {
+    color: #1a383a;
+}
+.landing .cont .img img {
+    width: 400px;
+    border-radius: 50%;
+    position: relative;
+    bottom: 25%;
+}
+@media (max-width: 1180px) {
+    .landing .cont {
+        position: relative;
+        left: 20%;
+        justify-content: left;
+    }
+    .landing .cont .img img {
+        width: 250px;
+    }
+}
+.landing .cont .text .social {
+    display: flex;
+    gap: 10px;
+}
+.landing .cont .text .social li i {
+    font-size: 25px;
+    color: #1a383a;
+    position: relative;
+    right: 44px;
+    transition: var(--main-transion);
+}
+.landing .cont .text .social li i:hover {
+    cursor: pointer;
+    color: #152b2c;
+}
+.landing  a {
+    border: 1px solid var(--main-color);
+    background-color: var(--main-color);
+    padding: 15px 20px;
+    position: relative;
+    top: 35px;
+    border-radius: 10px;
+    color: white;
+    transition: var(--main-transion);
+}
+.landing a:hover {
+    background-color: transparent;
+    color: var(--main-color);
+}
+
+/* About */
+.about {
+    padding: var(--padding-section) 0;
+}
+.about .main-heading {
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-align: center;
+    color: #1a383a;
+}
+.about .cont {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 120px 0;
+}
+.about .cont .text {
+    flex-basis: 50%;
+}
+.about .cont .text h2 {
+    color: #152b2c;    
+}
+.about .cont .text h2 span  {
+    color: var(--main-color);
+    font-weight: bolder;
+    font-size: 25px;
+
+}
+.about .cont .text p {
+    color: #777;
+    line-height: 2;
+
+}
+.about .cont .info {
+    flex-basis: 30%;
+}
+.about .cont .info h4 {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+.about .cont .info h4 span {
+    color: #152b2c;
+}
+@media (max-width: 997px) {
+    .about .cont {
+        flex-direction: column;
+    }
+    .about .cont .text {
+        text-align: center;
+    }
+}
+
+
+/* Skills & Abilities */
+
+.skills {
+    padding: var(--padding-section) 0;
+    background-color: #1a383a;
+}
+.skills .main-heading {
+    color: #fff;
+}
+.skills .main-heading span {
+    color: var(--main-color);
+}
+.skills .main-heading::before {
+    font-family: 'Font Awesome 5 Free';
+    content: "\f5fc";
+    font-weight: 900;
+}
+.skills .cont {
+    background-color: #132928;
+    padding: 50px;
+    border-radius: 5px;
+    width: 50%;
+    margin: 40px auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+@media (max-width: 991px) {
+    .skills .cont {
+        align-items: center;
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+.skills .cont .box {
+    background-color: #222;
+    width: 200px;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    transition: var(--main-transion);
+}
+
+.skills .cont .box:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px #000;
+}
+.skills .cont .box i {
+    font-size: 35px;
+    color: var(--main-color);
+    margin-top: 10px;
+}
+.skills .cont .box p {
+    color: #fff;
+    text-transform: uppercase;
+}
+/* Services */
+
+.srv {
+    padding: var(--padding-section) 0;
+}
+.srv h2 span {
+    color: var(--main-color);
+}
+.srv h2::before {
+    font-family: 'Font Awesome 5 Free';
+    content: "\f5fc";
+    font-weight: 900;
+}
+.srv .cont {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(400px,1fr));
+    gap: 10px;
+}
+.srv .cont .box {
+    box-shadow: 0 0 10px #ddd;
+    width: 400px;
+    text-align: center;
+    margin: 50px auto 30px;
+    margin-bottom: 30px;
+}
+/* .srv .cont .box:first-child {
+    margin-left: 50px;
+} */
+.srv .cont .box img {
+    margin: 30px auto;
+    width: 150px;
+    transition: var(--main-transion);
+}
+.srv .cont .box:hover img {
+    transform: scale(1.1);
+}
+.srv .cont .box h3 {
+    text-transform: uppercase;
+    color: #132928;
+}
+.srv .cont .box p {
+    color: #777;
+    line-height: 1.7;
+}
+
+/* Portfolio */
+
+.portfolio {
+    padding: var(--padding-section) 0;
+    background-color: #1a383a;
+}
+.portfolio .main-heading {
+    color: #fff;
+}
+.portfolio .main-heading span {
+    color: var(--main-color);
+}
+.portfolio .main-heading::before {
+    font-family: 'Font Awesome 5 Free';
+    content: "\f5fc";
+    font-weight: 900;
+}
+
+.portfolio .cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 60px 30px;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+.portfolio .cont .box {
+    background-color: #fff;
+    width: 450px;
+    text-align: center;
+    margin-top: 45px;
+    border-radius: 10px;
+}
+.portfolio .cont .box img {
+    width: 450px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    
+}
+.portfolio .cont .box h3 {
+    color: #132928;
+    position: relative;
+}
+
+.portfolio .cont .box a {
+    color: #132928;
+    background-color: var(--main-color);
+    padding: 15px 20px;
+    border-radius: 10px;
+    position: relative;
+    top: 10px;
+    transition: var(--main-transion);
+}
+.portfolio .cont .box a:hover {
+    color: #1a383a;
+}
+
+.portfolio .cont .box a:hover {
+    padding-left: 40px;
+    padding-right: 40px;
+    color: #1a383a;
+}
+
+/* Contact */
+
+.contact {
+    padding: var(--padding-section) 0;
+}
+.contact .main-heading span {
+    color: var(--main-color);
+}
+.contact .main-heading::before {
+    font-family: 'Font Awesome 5 Free';
+    content: "\f025";
+    font-weight: 900;
+}
+.contact .cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px auto;
+    box-shadow: 0 0 10px #ccc;
+}
+.contact .cont .img  img {
+    width: 400px;
+    position: relative;
+    left: -140px;
+}
+
+.contact .text {
+    position: relative;
+    right: 0;
+}
+.contact .text .input,
+.contact .text input[type="submit"] {
+    display: block;
+    margin-bottom: 20px;
+    padding: 15px 30px;
+    width: 100%;
+}
+.contact .text .input {
+    border: none;
+    border-bottom: 1px solid var(--main-color);
+}
+.contact .text .input:first-child {
+    margin-top: 30px;
+}
+.contact .text .input:focus {
+    outline: none;
+}
+.contact .text input[type="submit"] {
+    border: 1px solid var(--main-color);
+    background-color: var(--main-color);
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: var(--main-transion);
+}
+.contact .text input[type="submit"]:hover {
+    background-color: transparent;
+    color: var(--main-color);
+}
+.contact .text textarea {
+    resize: none;
+    height: 200px;
+}
+
+
+/* Footer */
+
+footer {
+    background-color: #132928;
+    height: 80px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
